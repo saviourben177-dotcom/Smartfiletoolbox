@@ -1,0 +1,23 @@
+kind = "mobile"
+previewPath = "/"
+title = "Smart File Toolbox"
+version = "1.0.0"
+id = "artifacts/smart-file-toolbox"
+router = "expo-domain"
+
+[[services]]
+name = "expo"
+ensurePreviewReachable = "/status"
+paths = [ "/" ]
+localPort = 20820
+
+[services.development]
+run = "pnpm --filter @workspace/smart-file-toolbox run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/smart-file-toolbox", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/smart-file-toolbox", "run", "serve" ]
+
+[services.env]
+PORT = "20820"
+BASE_PATH = "/"
