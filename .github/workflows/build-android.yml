@@ -31,7 +31,7 @@ jobs:
           version: 11
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       - name: Run expo prebuild (generate native android project)
         run: npx expo prebuild --platform android --clean --non-interactive
