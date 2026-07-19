@@ -1,4 +1,3 @@
-cat > .github/workflows/build-android.yml << 'WORKFLOWEOF'
 name: Build Android AAB
 
 on:
@@ -112,4 +111,3 @@ jobs:
         if: always()
         working-directory: android/app
         run: rm -f release.keystore
-WORKFLOWEOF
