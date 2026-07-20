@@ -5,6 +5,7 @@ module.exports = function (api) {
     plugins: [
       '@babel/plugin-transform-class-properties',
       '@babel/plugin-transform-private-methods',
+      'react-native-reanimated/plugin',
     ],
   };
 };
