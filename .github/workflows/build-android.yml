@@ -98,7 +98,7 @@ jobs:
 
       - name: Build release AAB
         working-directory: android
-        run: ./gradlew bundleRelease
+        run: ./gradlew bundleRelease --stacktrace --info > /tmp/build.log 2>&1 || (tail -300 /tmp/build.log && exit 1)
 
       - name: Upload AAB artifact
         uses: actions/upload-artifact@v4
